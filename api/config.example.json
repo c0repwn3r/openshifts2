@@ -1,0 +1,5 @@
+{
+	"db_dsn": "host=localhost user=postgres password=postgres dbname=postgres port=5432 sslmode=disable TimeZone=America/New_York",
+	"log_level": "trace",
+	"listen": "[::]:8109"
+}
