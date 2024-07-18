@@ -51,7 +51,7 @@ func main() {
 	}
 
 	log.Info("running migrations")
-	err = db.AutoMigrate(&models.Availability{}, &models.Organization{}, &models.OrganizationWeekdayHours{}, &models.OrganizationOverrideHours{}, &models.OWHAvailability{}, &models.OOHAvailability{}, &models.User{}, &models.Token{})
+	err = db.AutoMigrate(&models.Availability{}, &models.Organization{}, &models.OrganizationWeekdayHours{}, &models.OrganizationOverrideHours{}, &models.OWHAvailability{}, &models.OOHAvailability{}, &models.User{}, &models.Token{}, &models.UserWeekdayHours{}, &models.UserOverrideHours{}, &models.UWHAvailability{}, &models.UOHAvailability{})
 	if err != nil {
 		log.WithFields(log.Fields{
 			"apierr": err,

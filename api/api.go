@@ -36,6 +36,12 @@ func (a Api) Run() error {
 				org.GET("/hours", env.GetHoursRoute)
 				org.POST("/hours", env.SetHoursRoute)
 			}
+
+			user := authorized.Group("/user")
+			{
+				user.GET("/availability", env.GetUserHoursRoute)
+				user.POST("/availability", env.SetUserHoursRoute)
+			}
 		}
 
 	}
